@@ -34,7 +34,7 @@
 		"raw-loader": "^4.0.2",
 		"ts-loader": "^9.2.6",
 		"typescript": "^6.0.3",
-		"vsce": "^2.15.0",
+		"@vscode/vsce": "^3.9.2",
 		"webpack": "^5.59.1",
 		"webpack-cli": "^4.9.1"
 	},
