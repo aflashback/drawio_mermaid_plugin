@@ -371,8 +371,9 @@ mxShapeMermaid.prototype.paintVertexShape = function (c, x, y, w, h) {
         this.error = err.message;
     }
     if (this.error) {
+        var escapedError = this.error.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         c.setFontFamily('monospace');
-        c.text(x, y + h / 2, 0, 0, '<pre>' + this.error + '</pre>', mxConstants.ALIGN_LEFT, mxConstants.ALIGN_MIDDLE, false, 'html', 0, 0, 0);
+        c.text(x, y + h / 2, 0, 0, '<pre>' + escapedError + '</pre>', mxConstants.ALIGN_LEFT, mxConstants.ALIGN_MIDDLE, false, 'html', 0, 0, 0);
         c.stroke();
     }
     // Changing cell valueChanged will be kept even after changing shape -> moving the update to parse function (not seen any use case we miss)

@@ -117,7 +117,7 @@ var DialogMermaid = function (editorUi, shape) {
         if (code) mermaid.render('graph-div', code, insertSvg);
 
       } catch (e) {
-        parserStatus.innerHTML = e.str;
+        parserStatus.textContent = e.str;
       }
     }
     
