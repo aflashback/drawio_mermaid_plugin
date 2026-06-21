@@ -1,5 +1,5 @@
 import { ExtensionContext } from 'vscode';
-import { DrawioExtensionApi, DocumentContext } from './vscode-drawio/src/DrawioExtensionApi'
+import { DrawioExtensionApi, DocumentContext } from './DrawioExtensionApi'
 import drawio_plugin from 'raw-loader!./../../drawio_desktop/dist/mermaid-plugin.webpack.js';
 
 export function activate(context: ExtensionContext) {
